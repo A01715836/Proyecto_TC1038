@@ -1,26 +1,27 @@
+def calcular_promedio(calificacion1, calificacion2, calificacion3):
+    """función que calcula el promedio de las calificaciones"""
+    return (calificacion1 + calificacion2 + calificacion3) / 3
 
-#https://github.com/A01715836/A01715836_avance-proyecto
-# función que calcula el promedio de las calificaciones
-def calcular_promedio(calif1, calif2, calif3):
-    return (calif1 + calif2 + calif3) / 3
 
-# función que evalúa el desempeño 
 def evaluar_desempeno(promedio):
+    """función que evalúa el desempeño"""
     if promedio >= 9:
         print("Excelente")
     elif promedio >= 8:
         print("Muy bien")
-    elif promedio >= 7.9:
+    elif promedio >= 7:
         print("Trata de mejorar")
     else:
         print("Reprobado")
 
-# función pendiente
+
 def generar_reporte(datos):
+    """función pendiente"""
     print("funcion pendiente.")
 
-#menu de la calculadora 
+
 def main():
+    """menu de la calculadora"""
     continuar = True
 
     while continuar:
@@ -28,7 +29,7 @@ def main():
         print("1. Calcular promedio y evaluar estudiante")
         print("2. Generar reporte (función pendiente)")
         print("3. Salir")
-        
+
         opcion = input("Seleccione una opción (1-3): ")
 
         match opcion:
@@ -37,14 +38,12 @@ def main():
                 c2 = float(input("Ingrese la segunda calificación: "))
                 c3 = float(input("Ingrese la tercera calificación: "))
 
-                # Cálculo de promedio
                 promedio = calcular_promedio(c1, c2, c3)
-                
+
                 print("El resultado del promedio es:", promedio)
                 evaluar_desempeno(promedio)
 
             case "2":
-                # función pendiente
                 generar_reporte(None)
 
             case "3":
@@ -53,5 +52,6 @@ def main():
 
             case _:
                 print("ingrese una opción valida")
+
 
 main()
